@@ -56,4 +56,8 @@ export class EdicaoComponent implements OnInit {
         this.router.navigate(['/listar']);
       });
   }
+
+  voltarHome(){
+     this.router.navigate(['/listar']);
+  }
 }

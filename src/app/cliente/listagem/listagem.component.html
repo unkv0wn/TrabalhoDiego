@@ -1,17 +1,28 @@
-<h1>Ola Mundo</h1>
-<table>
+<h2>Listagem de Clientes</h2>
+
+<div class="mb-3 ml-4">
+  <button class="btn btn-secondary" (click)="cadastrar()">Cadastrar</button>
+</div>
+
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>cod</th>
-      <th>nome</th>
-      <th>idade</th>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Ações</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.id }}</td>
       <td>{{ cliente.nome }}</td>
       <td>{{ cliente.email }}</td>
-      <td>{{ cliente.telefone }}</td>
+      <td>{{ cliente.endereco }}</td>
+      <td>
+        <button type="button" class="btn btn-primary" (click)="editar(cliente)">Alterar</button>
+      </td>
     </tr>
   </tbody>
 </table>
