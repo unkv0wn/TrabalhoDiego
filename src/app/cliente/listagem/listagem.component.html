@@ -1,7 +1,6 @@
-<h2>Listagem de Clientes</h2>
-
-<div class="mb-3 ml-4">
-  <button class="btn btn-secondary" (click)="cadastrar()">Cadastrar</button>
+<div class="Cadastrar">
+  <h2>Listagem de Clientes</h2>
+  <button class="btn btn-warning" (click)="cadastrar()">Cadastrar</button>
 </div>
 
 <table class="table table-striped">
@@ -20,8 +19,13 @@
       <td>{{ cliente.nome }}</td>
       <td>{{ cliente.email }}</td>
       <td>{{ cliente.endereco }}</td>
-      <td>
-        <button type="button" class="btn btn-primary" (click)="editar(cliente)">Alterar</button>
+      <td class="acoes">
+        <button type="button" class="btn btn-primary" (click)="editar(cliente)">
+          Alterar
+        </button>
+        <button type="button" class="btn btn-danger" (click)="deletar(cliente)">
+          Deletar
+        </button>
       </td>
     </tr>
   </tbody>

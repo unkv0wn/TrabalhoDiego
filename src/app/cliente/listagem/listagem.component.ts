@@ -42,5 +42,11 @@ export class ListagemComponent implements OnInit {
     this.router.navigate(['/editar', cliente.id]);
   }
 
+  deletar(cliente: Cliente) {
+    this.clienteService.deletarCliente(cliente.id).subscribe(() => {
+      this.carregarCliente();
+    });
+  }
+
 
 }

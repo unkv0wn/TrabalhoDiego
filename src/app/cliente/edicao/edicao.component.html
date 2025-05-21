@@ -1,9 +1,5 @@
 <p class="h4 mb-4">Ediçao de Cliente</p>
 
-<div class="mb-3 ml-4">
-  <button class="btn btn-secondary" (click)="voltarHome()">Voltar para Home</button>
-</div>
-
 <form (ngSubmit)="salvar()" class="p-4 border rounded bg-light">
   <div class="mb-3">
     <label for="nome" class="form-label">Nome:</label>
@@ -68,4 +64,5 @@
   -->
 
   <button type="submit" class="btn btn-primary">Salvar</button>
+  <button type="submit" class="btn btn-danger" (click)="voltarHome()">Cancelar</button>
 </form>
